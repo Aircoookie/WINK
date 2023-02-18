@@ -92,8 +92,8 @@ int Epd::Init(void) {
     SendCommand(0x06);
     SendData(0x6F);
     SendData(0x1F);
-    SendData(0x16);
-    SendData(0x25);
+    SendData(0x1F); // original 0x16
+    SendData(0x22); // original 0x25
 
     SendCommand(0x08);
     SendData(0x6F);
@@ -106,7 +106,7 @@ int Epd::Init(void) {
     SendData(0x04);
 
     SendCommand(0x30);
-    SendData(0x02);
+    SendData(0x3C); // original 0x02
 
     SendCommand(0x41);     // TSE
     SendData(0x00);
